@@ -1,0 +1,49 @@
+.header__navigation {
+  margin-left: 50px;
+  @include media-tablet {
+    margin: 0;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.navigation__link {
+  list-style-type: none;
+  padding: 0 30px;
+  cursor:pointer;
+  @extend %transition;
+  @include media-tablet {
+    &:last-child {
+      padding-right: 40px;
+    }
+  }
+}
+
+.navigation__anchor {
+  text-decoration: none;
+  @include font($size: 2.3rem, $height: 2.2rem);
+  @extend %font-add;
+  color: $color-primary;
+  @include media-tablet {
+    @include font($size: 2.6rem, $height: 2.2rem);
+  }
+  &:hover {
+    color: $color-text;
+  }
+}
+
+a {
+  color: $color-primary;
+}
+
+a:visited {
+  @extend %font-primary;
+  color: $color-text;
+}

@@ -1,0 +1,14 @@
+.layout-3-column {
+  @include columns($width: 30%);
+  flex-wrap: wrap;
+}
+
+.layout-1-column {
+  @include columns($width: 100%);
+  flex-wrap:  wrap;
+}
+
+.layout-5-column {
+  @include columns($width: 18%);
+  flex-wrap: wrap;
+}
