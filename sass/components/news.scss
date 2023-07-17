@@ -1,0 +1,14 @@
+.news__wrapper {
+  padding-top: 48px;
+}
+.news-data h2 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+.news-data p {
+  margin: 0;
+  margin-bottom: 46px;
+  text-align: center;
+  @include font($size: 16px, $height: 50px, $weight: 500);
+  color: $color-bank-small;
+}

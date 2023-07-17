@@ -696,6 +696,26 @@ h6 {
   max-height: 538px;
 }
 
+.news__wrapper {
+  padding-top: 48px;
+}
+
+.news-data h2 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.news-data p {
+  margin: 0;
+  margin-bottom: 46px;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  color: #000;
+}
+
 .wrapper {
   max-width: 1300px;
   margin: 0 auto;
