@@ -12,6 +12,12 @@ h1 {
   color: $color-bank-description;
   margin: 0;
 }
+h2 {
+  @include font($size: 30px, $height: 50px, $weight: 500);
+  color: $color-header;
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+}
 
 h3 {
   @include font($size: 35px, $height: 50px, $weight: 500);
@@ -25,16 +31,14 @@ h3 {
 
 h5 {
   @include font($size: 16px, $height: 30px, $weight: 400);
-  text-align: center;
+  //text-align: center;
   color: $color-text;
   font-family: Rubik, sans-serif;
   margin: 0;
 }
 
-//h5 {
-//  @include font($size: 1.6rem, $height: 2.0rem);
-//}
-//
-//h6 {
-//  @include font($size: 1.4rem, $height: 1.7rem);
-//}
+h6 {
+  @include font($size: 20px, $height: 50px, $weight: 500);
+  margin: 0;
+  color: $color-bank-small;
+}
