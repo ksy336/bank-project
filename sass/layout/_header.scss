@@ -1,6 +1,13 @@
 .header__wrapper {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__header-logo {
+  margin-left: -20px;
+  //flex-grow: 1;
 }
   //@include media-tablet {
   //  padding: 10px 5px 10px 40px;
@@ -10,3 +17,4 @@
   //  padding-left: 30px;
   //}
 //}
+

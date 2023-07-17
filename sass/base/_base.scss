@@ -4,35 +4,37 @@ html {
 
 body {
   @extend %font-primary;
-  @include font($size: 1.8rem, $height: 2.2rem);
+  background: $color-background;
 }
 
 h1 {
-  @include font($size: 4.8rem, $height: 5.9rem);
+  @include font($size: 48px, $height: 50px, $weight: 700);
+  color: $color-bank-description;
+  margin: 0;
 }
 
 h3 {
-  @include font($size: 2.2rem, $height: 2.2rem);
-  text-align: center;
-  color: $color-primary;
-  &:hover {
-    color: $color-text;
-  }
-}
-
-h4 {
-  @include font($size: 1.8rem, $height: 2.2rem);
-  text-align: center;
-  color: $color-primary;
-  &:hover {
-    color: $color-text;
-  }
+  @include font($size: 35px, $height: 50px, $weight: 500);
+  color: $color-description;
+  font-family: Rubik, sans-serif;
+  margin: 0;
+  //&:hover {
+  //  color: $color-text;
+  //}
 }
 
 h5 {
-  @include font($size: 1.6rem, $height: 2.0rem);
+  @include font($size: 16px, $height: 30px, $weight: 400);
+  text-align: center;
+  color: $color-text;
+  font-family: Rubik, sans-serif;
+  margin: 0;
 }
 
-h6 {
-  @include font($size: 1.4rem, $height: 1.7rem);
-}
+//h5 {
+//  @include font($size: 1.6rem, $height: 2.0rem);
+//}
+//
+//h6 {
+//  @include font($size: 1.4rem, $height: 1.7rem);
+//}

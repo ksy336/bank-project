@@ -1,12 +1,4 @@
-.header__navigation {
-  margin-left: 50px;
-  @include media-tablet {
-    margin: 0;
-  }
-  @include media-mobile {
-    display: none;
-  }
-}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -16,34 +8,37 @@
 
 .navigation__link {
   list-style-type: none;
-  padding: 0 30px;
-  cursor:pointer;
+  //padding: 0 30px;
+  margin-right: 40px;
+  cursor: pointer;
   @extend %transition;
-  @include media-tablet {
-    &:last-child {
-      padding-right: 40px;
-    }
-  }
+  //@include media-tablet {
+  //  &:last-child {
+  //    padding-right: 40px;
+  //  }
+  //}
 }
-
+ .navigation__link:last-child {
+   margin-right: 0;
+ }
 .navigation__anchor {
   text-decoration: none;
-  @include font($size: 2.3rem, $height: 2.2rem);
-  @extend %font-add;
-  color: $color-primary;
-  @include media-tablet {
-    @include font($size: 2.6rem, $height: 2.2rem);
-  }
-  &:hover {
-    color: $color-text;
-  }
-}
-
-a {
-  color: $color-primary;
-}
-
-a:visited {
-  @extend %font-primary;
+  letter-spacing: 0.32px;
   color: $color-text;
+  @include font($size: 1.6rem, $height: 112%, $weight: 700);
+  //@include media-tablet {
+  //  @include font($size: 2.6rem, $height: 2.2rem);
+  //}
+  &:hover {
+    color: $color-support;
+  }
 }
+//
+//a {
+//  color: $color-primary;
+//}
+//
+//a:visited {
+//  @extend %font-primary;
+//  color: $color-text;
+//}

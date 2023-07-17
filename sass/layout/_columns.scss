@@ -12,3 +12,9 @@
   @include columns($width: 18%);
   flex-wrap: wrap;
 }
+.layout-2-column {
+  @include columns($width: 50%);
+  //flex-wrap: wrap;
+  //display: flex;
+  //justify-content: space-between;
+}

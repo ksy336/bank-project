@@ -1,0 +1,35 @@
+.card__wrapper {
+  padding-top: 132px;
+}
+.card__choose h1 {
+  width: 622px;
+  //width: 100%;
+  margin-bottom: 36px;
+}
+.card-item >* {
+  display: inline-block;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.card-item > *:hover {
+  transform: scale(0.99);
+}
+.card-item >*:nth-child(3),
+.card-item >*:nth-child(4){
+  margin-bottom: 0;
+}
+.card-item >*:nth-child(1),
+.card-item >*:nth-child(3){
+  margin-right: 16px;
+}
+
+.card-item img {
+  width: 100%;
+  height: auto;
+  max-width: 252px;
+  max-height: 150px;
+}
+.bank-cards {
+  margin-left: 155px;
+}
+
