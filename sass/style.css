@@ -594,6 +594,7 @@ h6 {
   line-height: 50px;
   margin: 0;
   color: #000;
+  margin-bottom: 79px;
 }
 
 .exchange__courses {
@@ -623,9 +624,6 @@ h6 {
 
 .currency__block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 51px;
 }
 
 .currency__name {
@@ -644,16 +642,58 @@ h6 {
   font-weight: 700;
   line-height: 112%;
   letter-spacing: 0.4px;
+  margin-left: 20px;
+  display: inline-block;
 }
 
 .currency-data__exchange {
   display: flex;
   flex-direction: column;
+  margin-right: 32px;
+  margin-bottom: 32px;
 }
 
 .currency-data__exchange > * {
   margin-bottom: 32px;
-  margin-right: 20px;
+}
+
+.image-info-exchange {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.services__wrapper {
+  padding-top: 48px;
+}
+
+.services-data h2 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.main__info-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-data p {
+  margin: 0;
+  margin-bottom: 48px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  color: #000;
+  text-align: center;
+}
+
+.services__block__map img {
+  width: 100%;
+  max-width: 1060px;
+  height: auto;
+  max-height: 538px;
 }
 
 .wrapper {
