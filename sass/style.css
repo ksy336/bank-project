@@ -405,7 +405,7 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-.navigation__link {
+.navigation__link, .footer__navigation__link {
   transition: all 0.3s ease-out;
 }
 
@@ -444,6 +444,18 @@ h3 {
   color: #0B132A;
   font-family: Rubik, sans-serif;
   margin: 0;
+}
+
+h4 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 147%;
+  color: #1C1C1E;
+  font-family: Rubik, sans-serif;
+  margin: 0;
+  letter-spacing: 0.6px;
+  text-align: center;
 }
 
 h5 {
@@ -696,6 +708,173 @@ h6 {
   max-height: 538px;
 }
 
+.support__wrapper {
+  padding-top: 176px;
+}
+
+.support-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-data h4 {
+  margin-bottom: 27px;
+  font-family: Ubuntu, sans-serif;
+}
+
+.support__text {
+  color: #EB801D;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 147%;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 0.48px;
+}
+
+.support__text-description {
+  font-weight: 500;
+  margin-bottom: 62px;
+  font-family: Ubuntu, sans-serif;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  position: relative;
+}
+
+input[type=text] {
+  border: none;
+  width: 525px;
+  height: 90px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.1);
+  display: block;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+button[type=submit] {
+  top: 7px;
+  right: 10px;
+  z-index: 9;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 161px;
+  height: 44px;
+  border-radius: 20px;
+  background: #686DF1;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 126%;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer {
+  background: linear-gradient(0deg, rgba(178, 178, 178, 0.2) 0%, rgba(178, 178, 178, 0.2) 100%), #F4F4F4;
+  margin-top: 98px;
+}
+
+.footer__wrapper {
+  padding-top: 96px;
+  padding-bottom: 92px;
+}
+
+.footer__logo-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.contacts__tel {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 147%;
+  color: #000;
+  text-align: center;
+}
+
+.contacts__mail {
+  color: #2D3748;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 147%;
+  text-align: center;
+  letter-spacing: 0.32px;
+}
+
+.footer__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.footer__nav {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.81);
+}
+
+.footer__navigation__link {
+  list-style-type: none;
+  margin-right: 32px;
+  cursor: pointer;
+}
+
+.footer__navigation__link:last-child {
+  margin-right: 0;
+}
+
+.footer__navigation__anchor {
+  color: #000;
+  letter-spacing: 0.32px;
+  text-decoration: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 147%;
+}
+.footer__navigation__anchor:hover {
+  color: #EB801D;
+}
+
+.text__cookies {
+  margin: 0;
+  color: #2D3748;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 147%;
+  letter-spacing: 0.32px;
+  margin-top: 32px;
+}
+
 .news__wrapper {
   padding-top: 48px;
 }
@@ -714,6 +893,44 @@ h6 {
   font-weight: 500;
   line-height: 50px;
   color: #000;
+}
+
+.news-item {
+  padding: 32px;
+  margin-right: 80px;
+}
+
+.news-item:last-child {
+  margin-right: 0;
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  max-width: 256px;
+  max-height: 120px;
+}
+
+.news-text {
+  margin: 0;
+  margin-top: 32px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  color: #000;
+  text-align: center;
+}
+
+.description-text {
+  margin: 0;
+  margin-top: 32px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  text-align: center;
 }
 
 .wrapper {
@@ -769,6 +986,15 @@ h6 {
   flex-wrap: wrap;
 }
 .layout-3-column > * {
+  flex-basis: 30%;
+}
+
+.layout-4-column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.layout-4-column > * {
   flex-basis: 30%;
 }
 

@@ -1,0 +1,84 @@
+.support__wrapper {
+  padding-top: 176px;
+}
+.support-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.support-data h4 {
+  margin-bottom: 27px;
+  font-family: Ubuntu, sans-serif;
+}
+.support__text {
+  color: $color-support;
+  @include font($size: 24px, $height: 147%, $weight: 700);
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 0.48px;
+}
+.support__text-description {
+  font-weight: 500;
+  margin-bottom: 62px;
+  font-family: Ubuntu, sans-serif;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  position: relative;
+}
+input[type="text"] {
+  border: none;
+  width: 525px;
+  height: 90px;
+  //flex-shrink: 0;
+  //outline: none;
+  border-radius: 20px;
+  background: $color-button-text;
+  box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.10);
+  display: block;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+button[type="submit"] {
+  //position: absolute;
+
+  top: 7px;
+  right: 10px;
+  z-index: 9;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 161px;
+  height: 44px;
+  border-radius: 20px;
+  background: $color-button-subscribe;
+  @include font($size: 16px, $height: 126%, $weight: 700);
+  padding: 13px;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  //overflow: hidden;
+  //position: relative;
+}
+//button[type="submit"]:before {
+//  //background: url("./src/assets/icons/send.svg");
+//  content: url("../../src/assets/icons/send.svg");
+//  width: 24px;
+//  height: 26px;
+//  /*background: url('ссылка_на_svg'); /* Вместо content
+//    width: 30px;
+//    height: 30px; /* Размеры иконки */
+//
+//}
+//button[type="submit"]:hover{
+//  background: #f00;
+//}
+svg {
+  display: inline-block;
+  margin-right: 10px;
+}

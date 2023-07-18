@@ -2,6 +2,10 @@
   @include columns($width: 30%);
   flex-wrap: wrap;
 }
+.layout-4-column {
+  @include columns($width: 30%);
+  flex-wrap: wrap;
+}
 
 .layout-1-column {
   @include columns($width: 100%);
