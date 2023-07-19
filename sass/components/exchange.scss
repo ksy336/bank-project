@@ -3,6 +3,9 @@
   @include media-mobile {
     padding-top: 40px;
   }
+  @include media-tablet {
+    padding-top: 40px;
+  }
 }
 .exchange__wrapper {
   border-radius: 28px;
@@ -15,6 +18,9 @@
   justify-content: space-between;
   align-items: flex-start;
   @include media-mobile {
+    flex-direction: column;
+  }
+  @include media-tablet {
     flex-direction: column;
   }
 }

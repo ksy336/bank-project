@@ -15,6 +15,11 @@
 .news__block {
   @include media-mobile {
     margin-left: 20px;
+    margin-right: 20px;
+  }
+  @include media-tablet {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 .news-item {
@@ -29,9 +34,20 @@
     margin-right: 0;
     margin-bottom: 20px;
   }
+  @include media-tablet {
+    text-align: center;
+    //margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 .news-item:last-child {
   margin-right: 0;
+  @include media-tablet {
+    margin-right: 80px;
+  }
+  @include media-mobile {
+    margin-right: 0px;
+  }
 }
 .news-item img {
   width: 100%;

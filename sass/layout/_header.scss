@@ -11,10 +11,19 @@
     //justify-content: center;
     //align-items: center;
   }
+  @include media-tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-around;
+  }
 }
 .header__header-logo {
   margin-left: -20px;
   @include media-mobile {
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+  @include media-tablet {
     margin-bottom: 20px;
     margin-left: 0;
   }

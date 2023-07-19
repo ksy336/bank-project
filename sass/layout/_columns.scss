@@ -25,6 +25,13 @@
     align-items: center;
     @include columns($width: 100%);
   }
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include columns($width: 100%);
+  }
   //flex-wrap: wrap;
   //display: flex;
   //justify-content: space-between;
