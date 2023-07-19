@@ -1,5 +1,8 @@
 .main__main__exchange {
   padding-top: 112px;
+  @include media-mobile {
+    padding-top: 40px;
+  }
 }
 .exchange__wrapper {
   border-radius: 28px;
@@ -11,6 +14,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @include media-mobile {
+    flex-direction: column;
+  }
 }
   .exchange__update p {
     @include font($size: 16px, $height: 50px, $weight: 500);

@@ -3,8 +3,8 @@
   flex-wrap: wrap;
 }
 .layout-4-column {
-  @include columns($width: 30%);
-  flex-wrap: wrap;
+  @include columns($width: 320px);
+  flex-wrap: nowrap;
 }
 
 .layout-1-column {
@@ -18,6 +18,13 @@
 }
 .layout-2-column {
   @include columns($width: 50%);
+  @include media-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include columns($width: 100%);
+  }
   //flex-wrap: wrap;
   //display: flex;
   //justify-content: space-between;

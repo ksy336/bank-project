@@ -2,15 +2,39 @@
   //fill: linear-gradient(0deg, rgba(178, 178, 178, 0.20) 0%, rgba(178, 178, 178, 0.20) 100%), #F4F4F4;
   background: linear-gradient(0deg, rgba(178, 178, 178, 0.20) 0%, rgba(178, 178, 178, 0.20) 100%), #F4F4F4;
   margin-top: 98px;
+  @include media-tablet {
+    margin-top: 40px;
+  }
+  @include media-mobile {
+    margin-top: 40px;
+  }
 }
 .footer__wrapper {
   padding-top: 96px;
   padding-bottom: 92px;
+  @include media-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include media-mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 .footer__logo-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @include media-tablet {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @include media-mobile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .footer__logo-info img {
   //width: 158px;
@@ -29,6 +53,12 @@
   @include font($size: 30px, $height: 147%, $weight: 700);
   color: $color-bank-small;
   text-align: center;
+  @include media-tablet {
+    @include font($size: 20px, $height: 121%, $weight: 500);
+  }
+  @include media-mobile {
+    @include font($size: 20px, $height: 121%, $weight: 500);
+  }
 }
 .contacts__mail {
   color: $footer-text;
@@ -43,6 +73,16 @@
   flex-wrap: wrap;
   margin: 0;
   margin-bottom: 28px;
+  @include media-tablet {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+  }
+  @include media-mobile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .footer__nav {
@@ -58,6 +98,12 @@
   //    padding-right: 40px;
   //  }
   //}
+  @include media-tablet {
+    margin-right: 0;
+  }
+  @include media-mobile {
+    margin-right: 0;
+  }
 }
 .footer__navigation__link:last-child {
   margin-right: 0;
@@ -80,4 +126,10 @@
   @include font($size: 16px, $height: 147%, $weight: 500);
   letter-spacing: 0.32px;
   margin-top: 32px;
+  @include media-tablet {
+   text-align: center;
+  }
+  @include media-mobile {
+    text-align: center;
+  }
 }

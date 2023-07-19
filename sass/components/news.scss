@@ -5,16 +5,30 @@
   margin-bottom: 8px;
   text-align: center;
 }
-.news-data p {
+.new__paragraph {
   margin: 0;
   margin-bottom: 46px;
   text-align: center;
   @include font($size: 16px, $height: 50px, $weight: 500);
   color: $color-bank-small;
 }
+.news__block {
+  @include media-mobile {
+    margin-left: 20px;
+  }
+}
 .news-item {
+  border-radius: 28px;
+  border: 1px solid rgba(187, 187, 187, 0.08);
+  background: $color-button-text;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
   padding: 32px;
   margin-right: 80px;
+  @include media-mobile {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 .news-item:last-child {
   margin-right: 0;
