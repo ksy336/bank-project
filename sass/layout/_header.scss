@@ -5,11 +5,8 @@
   justify-content: space-between;
   align-items: center;
   @include media-mobile {
-    //flex-direction: column;
     padding-top: 20px;
     padding-bottom: 20px;
-    //justify-content: center;
-    //align-items: center;
   }
   @include media-tablet {
     padding-top: 20px;
@@ -28,12 +25,5 @@
     margin-left: 0;
   }
 }
-  //@include media-tablet {
-  //  padding: 10px 5px 10px 40px;
-  //  justify-content: space-between;
-  //}
-  //@include media-mobile {
-  //  padding-left: 30px;
-  //}
-//}
+
 

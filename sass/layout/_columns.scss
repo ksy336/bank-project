@@ -6,12 +6,10 @@
   @include columns($width: 320px);
   flex-wrap: nowrap;
 }
-
 .layout-1-column {
   @include columns($width: 100%);
   flex-wrap:  wrap;
 }
-
 .layout-5-column {
   @include columns($width: 18%);
   flex-wrap: wrap;
@@ -32,7 +30,4 @@
     align-items: center;
     @include columns($width: 100%);
   }
-  //flex-wrap: wrap;
-  //display: flex;
-  //justify-content: space-between;
 }
