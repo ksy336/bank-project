@@ -1,0 +1,100 @@
+.main__main__exchange {
+  padding-top: 112px;
+
+  @include media-mobile {
+    padding-top: 40px;
+  }
+
+  @include media-tablet {
+    padding-top: 40px;
+  }
+}
+
+.exchange__wrapper {
+  border-radius: 28px;
+  padding: 32px;
+  background: linear-gradient(360deg, rgba(178, 178, 178, 0.80) 0%, rgba(178, 178, 178, 0.00) 100%), rgba(244, 244, 244, 0.90);
+  box-shadow: 0px 2px 4px 0px rgba(187, 187, 187, 0.20), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+  }
+
+.main__info-exchange {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include media-mobile {
+    flex-direction: column;
+  }
+
+  @include media-tablet {
+    flex-direction: column;
+  }
+}
+
+  .exchange__update p {
+    @include font($size: 16px, $height: 50px, $weight: 500);
+    margin: 0;
+    color: $color-bank-small;
+    margin-bottom: 79px;
+  }
+
+  .exchange__courses {
+    @include font($size: 20px, $height: 112%, $weight: 700);
+    color: $color-button-text;
+    letter-spacing: 0.4px;
+    margin: 0;
+  }
+
+  .image-info-exchange img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    max-height: 113px;
+  }
+
+  .currency-data h2 {
+    margin-bottom: 24px;
+  }
+
+  .currency-data h6 {
+    margin-bottom: 32px;
+  }
+
+  .currency__block {
+    display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+    //margin-bottom: 19px;
+  }
+
+  .currency__name {
+    color: $color-currency;
+    @include font($size: 20px, $height: 112%, $weight: 700);
+    letter-spacing: 0.4px;
+  }
+
+.currency__num {
+  color: $color-bank-small;
+  @include font($size: 20px, $height: 112%, $weight: 700);
+  letter-spacing: 0.4px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.currency-data__exchange {
+  display: flex;
+  flex-direction: column;
+  margin-right: 32px;
+  margin-bottom: 32px;
+}
+
+.currency-data__exchange >* {
+  margin-bottom: 32px;
+  //margin-right: 20px;
+}
+
+.image-info-exchange {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}

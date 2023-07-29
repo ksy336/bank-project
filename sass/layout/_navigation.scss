@@ -1,0 +1,35 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+
+  @include media-mobile {
+    display: none;
+  }
+
+  @include media-tablet {
+     display: none;
+   }
+}
+
+.navigation__link {
+  list-style-type: none;
+  margin-right: 40px;
+  cursor: pointer;
+  @extend %transition;
+}
+
+ .navigation__link:last-child {
+   margin-right: 0;
+ }
+
+.navigation__anchor {
+  text-decoration: none;
+  letter-spacing: 0.32px;
+  color: $color-text;
+  @include font($size: 1.6rem, $height: 112%, $weight: 700);
+  &:hover {
+    color: $color-support;
+  }
+}

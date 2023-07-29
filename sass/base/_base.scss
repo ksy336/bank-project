@@ -1,0 +1,98 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  @extend %font-primary;
+  background: $color-background;
+}
+
+h1 {
+  @include font($size: 48px, $height: 50px, $weight: 700);
+  color: $color-bank-description;
+  margin: 0;
+
+  @include media-mobile {
+    @include font($size: 35px, $height: 35px, $weight: 500);
+  }
+
+  @include media-tablet {
+    @include font($size: 35px, $height: 35px, $weight: 500);
+  }
+}
+
+h2 {
+  @include font($size: 30px, $height: 50px, $weight: 500);
+  color: $color-header;
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+
+  @include media-mobile {
+    @include font($size: 20px, $height: 40px, $weight: 500);
+  }
+
+  @include media-tablet {
+    @include font($size: 20px, $height: 40px, $weight: 500);
+  }
+}
+
+h3 {
+  @include font($size: 35px, $height: 50px, $weight: 500);
+  color: $color-description;
+  font-family: Rubik, sans-serif;
+  margin: 0;
+
+  @include media-mobile {
+    @include font($size: 25px, $height: 25px, $weight: 500);
+  }
+
+  @include media-tablet {
+    @include font($size: 25px, $height: 25px, $weight: 500);
+  }
+}
+
+h4 {
+  @include font($size: 30px, $height: 147%, $weight: 700);
+  color: $color-header;
+  font-family: Rubik, sans-serif;
+  margin: 0;
+  letter-spacing: 0.6px;
+  text-align: center;
+
+  @include media-mobile {
+    @include font($size: 20px, $height: 100%, $weight: 500);
+  }
+
+  @include media-tablet {
+    @include font($size: 20px, $height: 100%, $weight: 500);
+  }
+}
+
+h5 {
+  @include font($size: 16px, $height: 30px, $weight: 400);
+  color: $color-text;
+  font-family: Rubik, sans-serif;
+  margin: 0;
+
+  @include media-mobile {
+    @include font($size: 14px, $height: 25px, $weight: 500);
+  }
+
+  @include media-tablet {
+    @include font($size: 14px, $height: 25px, $weight: 500);
+  }
+}
+
+h6 {
+  @include font($size: 20px, $height: 50px, $weight: 500);
+  margin: 0;
+  color: $color-bank-small;
+
+  @include media-mobile {
+    @include font($size: 16px, $height: 35px, $weight: 500);
+  }
+
+  @include media-tablet {
+    @include font($size: 16px, $height: 35px, $weight: 500);
+  }
+}
