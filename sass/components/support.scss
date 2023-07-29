@@ -1,22 +1,27 @@
 .support__wrapper {
   padding-top: 176px;
+
   @include media-mobile {
     padding-top: 40px;
   }
+
   @include media-tablet {
     padding-top: 80px;
   }
 }
+
 .support-data {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .support-data h4 {
   margin-bottom: 27px;
   font-family: Ubuntu, sans-serif;
 }
+
 .support__text {
   margin: 0;
   color: $color-support;
@@ -25,11 +30,13 @@
   margin-bottom: 30px;
   letter-spacing: 0.48px;
 }
+
 .support__text-description {
   font-weight: 500;
   margin-bottom: 62px;
   font-family: Ubuntu, sans-serif;
 }
+
 .form {
   display: flex;
   justify-content: center;
@@ -37,6 +44,7 @@
   align-items: center;
   margin-right: 35px;
 }
+
 //form img {
 //  padding-left: 30px;
 //}
@@ -44,6 +52,7 @@
   background: url("../src/assets/icons/email.svg") no-repeat left;
   background-position: 32px;
 }
+
 input[type="text"] {
   //background: url("./src/assets/icons/email.svg") no-repeat scroll 7px 7px;
   //padding-left:30px;
@@ -58,14 +67,16 @@ input[type="text"] {
   box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.10);
   padding-top: 35px;
   padding-bottom: 35px;
+
   @include media-tablet {
     width: 450px;
   }
+
   @include media-mobile {
     width: 300px;
   }
-
 }
+
 ::placeholder {
   color: $color-input;
   padding-left: 69px;
@@ -74,20 +85,24 @@ input[type="text"] {
   font-family: Nunito Sans, sans-serif;
   letter-spacing: 0.4px;
   margin-top: 5px;
+
   @include media-mobile {
     @include font($size: 16px, $height: 121%, $weight: 400);
     text-align: left;
   }
+
   @include media-tablet {
     @include font($size: 16px, $height: 121%, $weight: 400);
   }
 }
+
 input:focus {
   outline: none;
 }
 //form:focus-within {
 //  outline: 1px solid $color-button-subscribe;
 //}
+
 button[type="submit"] {
   //position: absolute;
   margin-left: -200px;
@@ -108,19 +123,7 @@ button[type="submit"] {
   //overflow: hidden;
   //position: relative;
 }
-//button[type="submit"]:before {
-//  //background: url("./src/assets/icons/send.svg");
-//  content: url("../../src/assets/icons/send.svg");
-//  width: 24px;
-//  height: 26px;
-//  /*background: url('ссылка_на_svg'); /* Вместо content
-//    width: 30px;
-//    height: 30px; /* Размеры иконки */
-//
-//}
-//button[type="submit"]:hover{
-//  background: #f00;
-//}
+
 svg {
   display: inline-block;
   margin-right: 10px;

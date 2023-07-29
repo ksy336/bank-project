@@ -2,20 +2,25 @@
   @include columns($width: 30%);
   flex-wrap: wrap;
 }
+
 .layout-4-column {
   @include columns($width: 320px);
   flex-wrap: nowrap;
 }
+
 .layout-1-column {
   @include columns($width: 100%);
   flex-wrap:  wrap;
 }
+
 .layout-5-column {
   @include columns($width: 18%);
   flex-wrap: wrap;
 }
+
 .layout-2-column {
   @include columns($width: 50%);
+
   @include media-mobile {
     display: flex;
     flex-direction: column;
@@ -23,6 +28,7 @@
     align-items: center;
     @include columns($width: 100%);
   }
+
   @include media-tablet {
     display: flex;
     flex-direction: column;

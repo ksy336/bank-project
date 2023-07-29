@@ -7,10 +7,12 @@
   background: $color-button;
   border: none;
   text-align: center;
+
   &:hover {
     transform: scale(0.97);
   }
 }
+
 .button__online-bank {
   color: $color-button-text;
   letter-spacing: 0.32px;

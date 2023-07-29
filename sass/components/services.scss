@@ -1,15 +1,18 @@
 .services__wrapper {
   padding-top: 48px;
 }
+
 .services-data h2 {
   margin-bottom: 8px;
   text-align: center;
 }
+
 .main__info-services{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .services-data p {
   margin: 0;
   margin-bottom: 48px;
@@ -17,6 +20,7 @@
   color: $color-bank-small;
   text-align: center;
 }
+
 .services__block__map img {
   width: 100%;
   max-width: 1060px;
