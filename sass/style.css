@@ -1131,7 +1131,6 @@ svg {
 @media (max-width: 920px) {
   .news__block {
     margin-left: 20px;
-    margin-right: 20px;
   }
 }
 
@@ -1142,6 +1141,7 @@ svg {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
   padding: 32px;
   margin-right: 80px;
+  display: inline-block;
 }
 @media (max-width: 500px) {
   .news-item {
@@ -1171,6 +1171,10 @@ svg {
   }
 }
 
+a:link {
+  text-decoration: none !important;
+}
+
 .news-item img {
   width: 100%;
   height: auto;
@@ -1187,6 +1191,7 @@ svg {
   line-height: 25px;
   color: #000;
   text-align: center;
+  text-decoration: none !important;
 }
 
 .description-text {
@@ -1198,6 +1203,7 @@ svg {
   font-weight: 500;
   line-height: 23px;
   text-align: center;
+  text-decoration: none;
 }
 
 .wrapper {

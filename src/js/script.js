@@ -1,10 +1,11 @@
 "use strict"
+const newsTitle = document.querySelectorAll(".news-text");
+const newsDescription = document.querySelectorAll(".description-text");
+const imageUrl = document.querySelectorAll(".news-image");
+const newsItem = document.querySelectorAll(".news-item");
 
 // api request
-
-
 const currencyNums = document.querySelectorAll(".currency__num");
-// получить другие теги
 
 const getCurrencies = () => {
   const currencies = ["USD", "EUR", "SGD", "MYR", "AUD", "JPY"];
@@ -25,39 +26,52 @@ const getCurrencies = () => {
   }));
 };
 
-document.addEventListener("DOMContentLoaded", async () => {
-
+const executeApiRequest = async () => {
   try {
     const results = await getCurrencies();
-    // currencyNums.forEach((currencyNum) => {
-    //   currencyNum.textContent = ;
-    // })
     for(let i = 0; i < currencyNums.length; i++) {
-      currencyNums[i].textContent = results[i];
+      currencyNums[i].textContent = Number(results[i]).toFixed(2);
     }
   } catch (error) {
     console.error(error);
   }
+}
 
-  // fetch(`${API_URL}`, {
-  //   method: "GET",
-  //   headers: {
-  //     'X-RapidAPI-Key': '9402e4f359mshe09f696f3527b5cp1981b5jsn9c1495c3046b',
-  //     'X-RapidAPI-Host': 'currency-exchange.p.rapidapi.com'
-  //     // 'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-  //     // 'X-RapidAPI-Host': 'currency-exchange.p.rapidapi.com'
-  //   }
-  // })
-  //   .then(function (response) {
-  //   if(response.ok) {
-  //     const data = response.json();
-  //     // console.log(data);
-  //     // currencyNum.textContent = `${data}`;
-  //     const result = data.text();
-  //     console.log(result);
-  //   }
-  // })
-  //   .catch(err => console.error(err));
-})
-// Распределить эти данные по каждой колонке с валютой
+document.addEventListener("DOMContentLoaded",  async () => {
+  await executeApiRequest();
+  setInterval(executeApiRequest,900000);
+});
+
+// newsRequest
+const API_URL = "https://newsapi.org/v2/top-headlines?country=us&category=business&pageSize=30&apiKey=7b5c94d160d64e8d8e352ed0706d333b";
+
+const options  = {
+  headers: {
+    'X-Api-Key': '7b5c94d160d64e8d8e352ed0706d333b'
+  }
+}
+const getNewsFromApi = async () => {
+  const response = await fetch(API_URL, options);
+  const data = await response.json();
+  const transformedArticles =  data.articles.map((article) => {
+    return {
+      urlToImage: article.urlToImage,
+      url: article.url,
+      title: article.title,
+      description: article.description,
+    }
+  });
+  for(let i = 0; i < transformedArticles.length; i++) {
+    if(newsTitle[i] || newsDescription[i] || imageUrl[i] || newsItem[i]) {
+      newsTitle[i].textContent = transformedArticles[i]?.title;
+      newsDescription[i].textContent = transformedArticles[i]?.description;
+      imageUrl[i].src = transformedArticles[i].urlToImage;
+      newsItem[i].href = transformedArticles[i].url;
+    }
+  }
+
+  return transformedArticles;
+}
+
+document.addEventListener("DOMContentLoaded", getNewsFromApi);
 
