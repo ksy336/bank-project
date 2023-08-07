@@ -1122,6 +1122,10 @@ svg {
   color: #000;
 }
 
+.news__block {
+  overflow: hidden;
+  transition: transform 0.3s;
+}
 @media (max-width: 500px) {
   .news__block {
     margin-left: 20px;
@@ -1157,6 +1161,28 @@ svg {
   }
 }
 
+.buttons-slider {
+  margin-top: 68px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-left,
+.button-right {
+  cursor: pointer;
+}
+
+.button-left:hover,
+.button-right:hover,
+.button-left:visited,
+.button-right:visited {
+  transform: scale(0.98);
+}
+
+.button-left {
+  margin-right: 20px;
+}
+
 .news-item:last-child {
   margin-right: 0;
 }
@@ -1180,6 +1206,7 @@ a:link {
   height: auto;
   max-width: 256px;
   max-height: 120px;
+  text-align: center;
 }
 
 .news-text {
@@ -1192,6 +1219,7 @@ a:link {
   color: #000;
   text-align: center;
   text-decoration: none !important;
+  width: 256px;
 }
 
 .description-text {
@@ -1204,6 +1232,7 @@ a:link {
   line-height: 23px;
   text-align: center;
   text-decoration: none;
+  width: 256px;
 }
 
 .wrapper {

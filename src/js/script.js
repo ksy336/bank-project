@@ -63,8 +63,8 @@ const getNewsFromApi = async () => {
   });
   for(let i = 0; i < transformedArticles.length; i++) {
     if(newsTitle[i] || newsDescription[i] || imageUrl[i] || newsItem[i]) {
-      newsTitle[i].textContent = transformedArticles[i]?.title;
-      newsDescription[i].textContent = transformedArticles[i]?.description;
+      newsTitle[i].textContent = transformedArticles[i]?.title.replaceAll(/<\/?[^>]+(>|$)/gi, "");
+      newsDescription[i].textContent = transformedArticles[i]?.description.replaceAll(/<\/?[^>]+(>|$)/gi, "");
       imageUrl[i].src = transformedArticles[i].urlToImage;
       newsItem[i].href = transformedArticles[i].url;
     }
@@ -74,4 +74,26 @@ const getNewsFromApi = async () => {
 }
 
 document.addEventListener("DOMContentLoaded", getNewsFromApi);
+
+// slider
+const slider = () => {
+  const slides = document.querySelectorAll(".news-item"); // div
+  console.log(slides);
+  const slider = document.querySelector(".main__info-news"); // container
+  // const dotsContainer = document.querySelector(".dots");
+  const track = document.querySelector(".layout-4-column");
+  const newsBlock = document.querySelector(".news__block");
+  const prev = document.querySelector(".button-left");
+  const next = document.querySelector(".button-right");
+  const width = newsBlock.offsetWidth;
+
+
+next.addEventListener("click", () => {
+  track.style.transform = `translateX(-${width}px)`;
+});
+prev.addEventListener("click", () => {
+  track.style.transform = `translateX(0)`;
+});
+}
+slider();
 

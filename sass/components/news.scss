@@ -16,6 +16,8 @@
 }
 
 .news__block {
+  overflow: hidden;
+  transition: transform 0.3s;
   @include media-mobile {
     margin-left: 20px;
     margin-right: 20px;
@@ -49,6 +51,27 @@
   }
 }
 
+.buttons-slider {
+  margin-top: 68px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-left,
+.button-right {
+  cursor: pointer;
+}
+
+.button-left:hover,
+.button-right:hover,
+.button-left:visited,
+.button-right:visited {
+  transform: scale(.98);
+}
+
+.button-left {
+  margin-right: 20px;
+}
 .news-item:last-child {
   margin-right: 0;
 
@@ -70,6 +93,7 @@ a:link{
   height: auto;
   max-width: 256px;
   max-height: 120px;
+  text-align: center;
 }
 
 .news-text {
@@ -79,6 +103,7 @@ a:link{
   color: $color-bank-small;
   text-align: center;
   text-decoration: none !important;
+  width: 256px;
  }
 
 .description-text {
@@ -88,4 +113,5 @@ a:link{
   @include font($size: 16px, $height: 23px, $weight: 500);
   text-align: center;
   text-decoration: none;
+  width: 256px;
 }
