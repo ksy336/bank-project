@@ -1172,6 +1172,14 @@ svg {
   cursor: pointer;
 }
 
+.button-right.show {
+  display: block;
+}
+
+.button-right.hide {
+  display: none;
+}
+
 .button-left:hover,
 .button-right:hover,
 .button-left:visited,
@@ -1345,6 +1353,7 @@ a:link {
 .layout-4-column {
   display: flex;
   justify-content: space-between;
+  display: inline-flex;
   flex-wrap: nowrap;
 }
 .layout-4-column > * {

@@ -61,7 +61,13 @@
 .button-right {
   cursor: pointer;
 }
+.button-right.show {
+  display: block;
+}
 
+.button-right.hide {
+  display: none;
+}
 .button-left:hover,
 .button-right:hover,
 .button-left:visited,

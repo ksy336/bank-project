@@ -6,6 +6,7 @@
 .layout-4-column {
   @include columns($width: 320px);
   //max-width: 320px;
+  display: inline-flex;
   flex-wrap: nowrap;
 }
 
