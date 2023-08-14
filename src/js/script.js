@@ -53,6 +53,7 @@ const options  = {
 const getNewsFromApi = async () => {
   const response = await fetch(API_URL, options);
   const data = await response.json();
+  console.log(data.articles)
   const transformedArticles =  data.articles.map((article) => {
     return {
       urlToImage: article.urlToImage,
@@ -64,45 +65,40 @@ const getNewsFromApi = async () => {
   for(let i = 0; i < transformedArticles.length; i++) {
     if(newsTitle[i] || newsDescription[i] || imageUrl[i] || newsItem[i]) {
       newsTitle[i].textContent = transformedArticles[i]?.title.replaceAll(/<\/?[^>]+(>|$)/gi, "");
-      newsDescription[i].textContent = transformedArticles[i]?.description.replaceAll(/<\/?[^>]+(>|$)/gi, "");
-      imageUrl[i].src = transformedArticles[i].urlToImage;
+      newsDescription[i].textContent = transformedArticles[i]?.description?.replaceAll(/<\/?[^>]+(>|$)/gi, "");
+      imageUrl[i].src = transformedArticles[i]?.urlToImage;
       newsItem[i].href = transformedArticles[i].url;
     }
+    // if(!imageUrl[i].src) {
+    //   imageUrl[i].src = "https://guwahatiplus.com/public/web/images/default-news.png";
+    // }
   }
   return transformedArticles;
 }
 getNewsFromApi();
-// document.addEventListener("DOMContentLoaded", getNewsFromApi);
 
 // slider
 const slider = () => {
-  const slides = document.querySelectorAll(".news-item");
-  const slider = document.querySelector(".main__info-news");
   const track = document.querySelector(".layout-4-column");
   const newsBlock = document.querySelector(".news__block");
   const prev = document.querySelector(".button-left");
   const next = document.querySelector(".button-right");
   const width = newsBlock.offsetWidth;
-  let index = 0;
 
+  next.addEventListener("click", () => {
+    prev.classList.add("show");
+    newsBlock.scrollLeft += width;
+    if (track.offsetWidth - newsBlock.scrollLeft === width) {
+      next.classList.add("hide");
+    }
+  });
 
-next.addEventListener("click", () => {
-  getNewsFromApi()
-  index++;
-  prev.classList.add("show");
-  track.style.transform = `translateX(-${index * width}px)`;
-  if (track.offsetWidth - (index * width) < width) {
-    next.classList.add("hide");
+  prev.addEventListener("click", () => {
+    if (track.offsetWidth - newsBlock.scrollLeft > width) {
+      next.classList.remove("hide");
+    }
+    newsBlock.scrollLeft -= width;
+  });
   }
-});
-prev.addEventListener("click", () => {
-  getNewsFromApi()
-  index--;
-  if (index === 0) {
-    prev.classList.remove("show");
-  }
-  track.style.transform = `translateX(0)`;
-});
-}
-slider();
+  slider();
 

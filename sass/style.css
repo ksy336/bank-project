@@ -1123,7 +1123,9 @@ svg {
 }
 
 .news__block {
-  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: auto;
   transition: transform 0.3s;
 }
 @media (max-width: 500px) {
@@ -1136,6 +1138,10 @@ svg {
   .news__block {
     margin-left: 20px;
   }
+}
+
+.news__block::-webkit-scrollbar {
+  display: none;
 }
 
 .news-item {
@@ -1177,6 +1183,14 @@ svg {
 }
 
 .button-right.hide {
+  display: none;
+}
+
+.button-left.show {
+  display: block;
+}
+
+.button-left.hide {
   display: none;
 }
 

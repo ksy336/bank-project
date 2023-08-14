@@ -16,7 +16,11 @@
 }
 
 .news__block {
-  overflow: hidden;
+  //overflow-x: scroll;
+  //overflow: hidden;  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: auto;
   transition: transform 0.3s;
   @include media-mobile {
     margin-left: 20px;
@@ -27,6 +31,10 @@
     margin-left: 20px;
     //margin-right: 20px;
   }
+}
+
+.news__block::-webkit-scrollbar {
+  display: none;
 }
 
 .news-item {
@@ -68,6 +76,15 @@
 .button-right.hide {
   display: none;
 }
+
+.button-left.show {
+  display: block;
+}
+
+.button-left.hide {
+  display: none;
+}
+
 .button-left:hover,
 .button-right:hover,
 .button-left:visited,
