@@ -69,9 +69,6 @@ const getNewsFromApi = async () => {
       imageUrl[i].src = transformedArticles[i]?.urlToImage;
       newsItem[i].href = transformedArticles[i].url;
     }
-    // if(!imageUrl[i].src) {
-    //   imageUrl[i].src = "https://guwahatiplus.com/public/web/images/default-news.png";
-    // }
   }
   return transformedArticles;
 }
@@ -84,18 +81,22 @@ const slider = () => {
   const prev = document.querySelector(".button-left");
   const next = document.querySelector(".button-right");
   const width = newsBlock.offsetWidth;
+  const item = document.querySelector('.news-item');
 
   next.addEventListener("click", () => {
-    prev.classList.add("show");
-    newsBlock.scrollLeft += width;
+    // prev.classList.add("show");
+    prev.disabled = false;
+    newsBlock.scrollLeft += item.offsetWidth + 80 + newsBlock.scrollLeft;
     if (track.offsetWidth - newsBlock.scrollLeft === width) {
-      next.classList.add("hide");
+      // next.classList.add("hide");
+      next.disabled = true;
     }
   });
 
   prev.addEventListener("click", () => {
     if (track.offsetWidth - newsBlock.scrollLeft > width) {
-      next.classList.remove("hide");
+      // next.classList.remove("hide");
+      next.disabled = false;
     }
     newsBlock.scrollLeft -= width;
   });
