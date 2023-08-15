@@ -70,7 +70,6 @@ const getNewsFromApi = async () => {
       newsItem[i].href = transformedArticles[i].url;
     }
   }
-  return transformedArticles;
 }
 getNewsFromApi();
 
