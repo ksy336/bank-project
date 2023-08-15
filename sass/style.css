@@ -1122,6 +1122,12 @@ svg {
   color: #000;
 }
 
+.news__block {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: auto;
+  transition: transform 0.3s;
+}
 @media (max-width: 500px) {
   .news__block {
     margin-left: 20px;
@@ -1131,8 +1137,11 @@ svg {
 @media (max-width: 920px) {
   .news__block {
     margin-left: 20px;
-    margin-right: 20px;
   }
+}
+
+.news__block::-webkit-scrollbar {
+  display: none;
 }
 
 .news-item {
@@ -1142,6 +1151,7 @@ svg {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
   padding: 32px;
   margin-right: 80px;
+  display: inline-block;
 }
 @media (max-width: 500px) {
   .news-item {
@@ -1155,6 +1165,44 @@ svg {
     text-align: center;
     margin-bottom: 20px;
   }
+}
+
+.buttons-slider {
+  margin-top: 68px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-left,
+.button-right {
+  cursor: pointer;
+}
+
+.button-right.show {
+  display: block;
+}
+
+.button-right.hide {
+  display: none;
+}
+
+.button-left.show {
+  display: block;
+}
+
+.button-left.hide {
+  display: none;
+}
+
+.button-left:hover,
+.button-right:hover,
+.button-left:visited,
+.button-right:visited {
+  transform: scale(0.98);
+}
+
+.button-left {
+  margin-right: 20px;
 }
 
 .news-item:last-child {
@@ -1171,11 +1219,16 @@ svg {
   }
 }
 
+a:link {
+  text-decoration: none !important;
+}
+
 .news-item img {
   width: 100%;
   height: auto;
   max-width: 256px;
   max-height: 120px;
+  text-align: center;
 }
 
 .news-text {
@@ -1187,6 +1240,8 @@ svg {
   line-height: 25px;
   color: #000;
   text-align: center;
+  text-decoration: none !important;
+  width: 256px;
 }
 
 .description-text {
@@ -1198,6 +1253,8 @@ svg {
   font-weight: 500;
   line-height: 23px;
   text-align: center;
+  text-decoration: none;
+  width: 256px;
 }
 
 .wrapper {
@@ -1310,6 +1367,7 @@ svg {
 .layout-4-column {
   display: flex;
   justify-content: space-between;
+  display: inline-flex;
   flex-wrap: nowrap;
 }
 .layout-4-column > * {

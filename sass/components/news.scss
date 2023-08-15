@@ -16,6 +16,12 @@
 }
 
 .news__block {
+  //overflow-x: scroll;
+  //overflow: hidden;  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: auto;
+  transition: transform 0.3s;
   @include media-mobile {
     margin-left: 20px;
     margin-right: 20px;
@@ -23,8 +29,12 @@
 
   @include media-tablet {
     margin-left: 20px;
-    margin-right: 20px;
+    //margin-right: 20px;
   }
+}
+
+.news__block::-webkit-scrollbar {
+  display: none;
 }
 
 .news-item {
@@ -34,6 +44,7 @@
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
   padding: 32px;
   margin-right: 80px;
+  display: inline-block;
 
   @include media-mobile {
     text-align: center;
@@ -48,6 +59,42 @@
   }
 }
 
+.buttons-slider {
+  margin-top: 68px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-left,
+.button-right {
+  cursor: pointer;
+}
+.button-right.show {
+  display: block;
+}
+
+.button-right.hide {
+  display: none;
+}
+
+.button-left.show {
+  display: block;
+}
+
+.button-left.hide {
+  display: none;
+}
+
+.button-left:hover,
+.button-right:hover,
+.button-left:visited,
+.button-right:visited {
+  transform: scale(.98);
+}
+
+.button-left {
+  margin-right: 20px;
+}
 .news-item:last-child {
   margin-right: 0;
 
@@ -60,11 +107,16 @@
   }
 }
 
+a:link{
+  text-decoration: none!important;
+}
+
 .news-item img {
   width: 100%;
   height: auto;
   max-width: 256px;
   max-height: 120px;
+  text-align: center;
 }
 
 .news-text {
@@ -73,6 +125,8 @@
   @include font($size: 20px, $height: 25px, $weight: 500);
   color: $color-bank-small;
   text-align: center;
+  text-decoration: none !important;
+  width: 256px;
  }
 
 .description-text {
@@ -81,4 +135,6 @@
   color: $color-bank-small;
   @include font($size: 16px, $height: 23px, $weight: 500);
   text-align: center;
+  text-decoration: none;
+  width: 256px;
 }
